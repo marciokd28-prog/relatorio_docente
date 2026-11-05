@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório de Atividades DOCENTE/MONITOR | Portal de Envio</title>
+<style>
+:root{--navy:#17324d;--blue:#245fba;--ink:#202b38;--muted:#667085;--line:#dce3ec;--bg:#f3f6fa;--green:#16734d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink)}
+header{background:linear-gradient(120deg,#17324d,#285b88);color:#fff;padding:28px 20px 58px}
+.head,.hero{max-width:1100px;margin:auto}.head{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:750}.tag{font-size:12px;border:1px solid #ffffff66;border-radius:30px;padding:5px 10px}
+.hero{margin-top:28px}.hero h1{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0 0 8px}.hero p{margin:0;color:#e0eaf5;max-width:720px}
+main{max-width:1100px;margin:-30px auto 40px;padding:0 16px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(245px,.75fr);gap:18px;align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:0 8px 24px #172f4b0a}
+.section{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #edf0f4}.section:last-of-type{border:0;margin:0;padding:0}
+h2{font-size:17px;color:var(--navy);margin:0 0 4px}.section-desc{font-size:12px;color:var(--muted);margin:0 0 15px}
+h3{font-size:14px;color:#344054;margin:18px 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:5px}.full{grid-column:1/-1}
+label{font-size:12px;font-weight:700;color:#344054}
+input,select,textarea{width:100%;border:1px solid #cfd8e3;border-radius:8px;padding:10px 11px;background:white;color:var(--ink);font:inherit;font-size:14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #245fba18}
+textarea{min-height:100px;resize:vertical}.short{min-height:72px}
+.checks{display:flex;flex-wrap:wrap;gap:10px 16px;padding:10px;border:1px solid var(--line);border-radius:8px}
+.checks label{font-weight:500;display:flex;align-items:center;gap:6px}.checks input{width:auto}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+button{border:0;border-radius:8px;padding:11px 16px;font-weight:700;cursor:pointer}.primary{background:var(--blue);color:white}.secondary{background:#edf1f6;color:#344054}
+.hint{font-size:11px;color:var(--muted);margin-top:4px}
+.side{display:grid;gap:15px}.side ol{padding-left:20px;margin:12px 0 0;color:#475467;font-size:13px}.side li{margin:0 0 10px}.notice{font-size:13px;background:#eef6ff;border:1px solid #d8e8fb;color:#31577e;padding:13px;border-radius:10px}
+#feedback{display:none;background:#eef8f2;color:#17633f;padding:12px;border-radius:9px;margin-top:14px;font-size:13px}
+footer{text-align:center;color:#8490a0;font-size:11px;padding:0 15px 25px}
+@media(max-width:800px){main{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.full{grid-column:auto}.tag{display:none}}
+</style>
+</head>
+<body>
+<header><div class="head"><div class="brand">✦ Portal de Relatórios</div><div class="tag">Relatório de Atividades DOCENTE/MONITOR</div></div>
+<div class="hero"><h1>Relatório de Atividades DOCENTE/MONITOR</h1><p>Preencha os dados conforme o formulário de referência e encaminhe o relatório ao responsável indicado.</p></div></header>
+<main>
+<section class="card">
+<form id="form">
+<div class="section">
+<h2>1. Dados da capacitação</h2><p class="section-desc">Identificação da ação educacional e da turma.</p>
+<div class="grid">
+<div class="field full"><label for="acao">Ação Educacional *</label><input id="acao" required placeholder="Nome e edição da ação educacional"></div>
+<div class="field"><label for="disciplina">Disciplina *</label><input id="disciplina" required placeholder="Nome da disciplina"></div>
+<div class="field"><label for="periodo">Período *</label><input id="periodo" required placeholder="Ex.: 20/10/2026 a 21/11/2026"></div>
+<div class="field"><label for="local">Local *</label><input id="local" required placeholder="Cidade/UF"></div>
+<div class="field"><label for="participantes">N.º de participantes *</label><input id="participantes" required placeholder="Quantidade e turma/pelotão"></div>
+<div class="field"><label for="horas">Quantidade de horas-aula *</label><input id="horas" required placeholder="Ex.: 24 h/a"></div>
+</div></div>
+<div class="section">
+<h2>2. Dados do monitor(a)</h2><p class="section-desc">Informações de identificação e escolaridade.</p>
+<div class="grid">
+<div class="field full"><label for="nome">Nome completo *</label><input id="nome" required placeholder="Nome completo do(a) monitor(a)"></div>
+<div class="field"><label for="email">E-mail *</label><input id="email" type="email" required placeholder="nome@exemplo.com"></div>
+<div class="field"><label for="telefone">Telefone/Celular *</label><input id="telefone" required placeholder="(00) 00000-0000"></div>
+<div class="field full"><label>Escolaridade *</label><div class="checks">
+<label><input type="radio" name="escolaridade" value="Ensino Médio" required> Ens. Médio</label>
+<label><input type="radio" name="escolaridade" value="Graduação"> Graduação</label>
+<label><input type="radio" name="escolaridade" value="Especialização"> Especialização</label>
+<label><input type="radio" name="escolaridade" value="Mestrado"> Mestrado</label>
+<label><input type="radio" name="escolaridade" value="Doutorado"> Doutorado</label>
+</div></div>
+</div></div>
+<div class="section">
+<h2>3. Relatos</h2><p class="section-desc">Responda aos itens conforme as atividades realizadas durante a ação educacional.</p>
+<div class="field"><label for="r31">3.1 Descreva as atividades desenvolvidas para auxiliar os discentes na ação educacional. *</label><textarea id="r31" required placeholder="Descreva as atividades, orientações, oficinas e apoios realizados."></textarea></div>
+<div class="field" style="margin-top:14px"><label for="r32">3.2 Quais foram as principais dificuldades manifestadas pelos discentes em relação à disciplina? *</label><textarea id="r32" required placeholder="Registre as dificuldades relatadas ou observadas."></textarea></div>
+<div class="field" style="margin-top:14px"><label for="r33">3.3 Você enfrentou dificuldades relacionadas à atuação do docente, coordenador e supervisor do curso? Em caso positivo, por gentileza, relate: *</label><textarea id="r33" class="short" required placeholder="Informe as dificuldades ou registre que não houve dificuldades."></textarea></div>
+<div class="field" style="margin-top:14px"><label for="r34">3.4 Houve dificuldades com a infraestrutura do curso (instalações, equipamentos, recursos didático-pedagógicos e transportes/apoio local)? Em caso positivo, por gentileza, relate: *</label><textarea id="r34" class="short" required placeholder="Informe as dificuldades ou registre que não houve dificuldades."></textarea></div>
+</div>
+<div class="section">
+<h2>3.9 Registro de sugestões</h2><p class="section-desc">Registre aspectos positivos e oportunidades de melhoria.</p>
+<div class="field"><label for="fortes">a) Pontos fortes *</label><textarea id="fortes" required placeholder="Descreva os pontos fortes identificados."></textarea></div>
+<div class="field" style="margin-top:14px"><label for="melhoria">b) Pontos de melhoria *</label><textarea id="melhoria" required placeholder="Descreva os pontos que podem ser aprimorados e, se possível, apresente sugestões."></textarea></div>
+</div>
+<div class="section">
+<h2>4. Data e assinatura</h2><p class="section-desc">Identificação do local, data e responsável pelo relatório.</p>
+<div class="grid">
+<div class="field"><label for="cidade">Cidade/UF *</label><input id="cidade" required placeholder="Ex.: Brasília-DF"></div>
+<div class="field"><label for="data">Data *</label><input id="data" type="date" required></div>
+<div class="field full"><label for="assinatura">Nome para identificação da assinatura *</label><input id="assinatura" required placeholder="Nome completo do(a) monitor(a)"></div>
+</div><p class="hint">A assinatura formal poderá ser inserida no documento final, conforme o procedimento da instituição.</p>
+</div>
+<div class="section">
+<h2>5. Encaminhamento</h2><p class="section-desc">Informe o destinatário e, se desejar, anexe o documento complementar.</p>
+<div class="grid">
+<div class="field full"><label for="destinatario">E-mail do destinatário (docente/coordenador) *</label><input id="destinatario" type="email" required placeholder="destinatario@instituicao.gov.br"></div>
+<div class="field full"><label for="anexo">Anexar arquivo complementar (opcional)</label><input id="anexo" type="file" accept=".pdf,.doc,.docx,.odt"></div>
+</div></div>
+<div class="actions"><button class="primary" type="submit">Preparar envio por e-mail →</button><button class="secondary" type="reset">Limpar formulário</button></div>
+<div id="feedback" role="status"></div>
+<p class="hint">O botão prepara uma mensagem no aplicativo de e-mail. Ele não transmite os dados nem anexa arquivos automaticamente; confira e anexe o documento antes de enviar.</p>
+</form></section>
+<aside class="side">
+<div class="card"><h2>Etapas do preenchimento</h2><ol><li>Preencha os dados da capacitação.</li><li>Informe os dados do monitor e a escolaridade.</li><li>Responda aos itens 3.1 a 3.4.</li><li>Registre pontos fortes e pontos de melhoria no item 3.9.</li><li>Informe data, identificação e destinatário.</li><li>Revise a mensagem e finalize o envio pelo seu e-mail.</li></ol></div>
+<div class="card"><h2>Orientação</h2><p class="notice">Os campos e a organização desta página foram adaptados ao formulário “Relatório de Atividades DOCENTE/MONITOR” fornecido como referência.</p><p class="hint">Esta versão é um protótipo local. Para receber, armazenar e acompanhar relatórios em uma plataforma institucional, será necessário configurar um serviço de backend e autenticação.</p></div>
+</aside>
+</main>
+<footer>Portal de Relatórios • Modelo baseado no formulário fornecido pelo usuário.</footer>
+<script>
+const form=document.getElementById('form');
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ const val=id=>document.getElementById(id).value.trim();
+ const escolaridade=form.querySelector('input[name="escolaridade"]:checked')?.value||'';
+ const arquivo=document.getElementById('anexo').files[0];
+ const conteudo=`RELATÓRIO DE ATIVIDADES DO MONITOR
+
+1. DADOS DA CAPACITAÇÃO
+Ação Educacional: ${val('acao')}
+Disciplina: ${val('disciplina')}
+Período: ${val('periodo')}
+Local: ${val('local')}
+N.º de participantes: ${val('participantes')}
+Quantidade de horas-aula: ${val('horas')}
+
+2. DADOS DO MONITOR(A)
+Nome Completo: ${val('nome')}
+E-mail: ${val('email')}
+Telefone/Celular: ${val('telefone')}
+Escolaridade: ${escolaridade}
+
+3. RELATOS
+3.1 Atividades desenvolvidas:
+${val('r31')}
+
+3.2 Dificuldades manifestadas pelos discentes:
+${val('r32')}
+
+3.3 Dificuldades relacionadas à atuação do docente, coordenador e supervisor:
+${val('r33')}
+
+3.4 Dificuldades com a infraestrutura do curso:
+${val('r34')}
+
+3.9 REGISTRO DE SUGESTÕES
+a) Pontos fortes:
+${val('fortes')}
+
+b) Pontos de melhoria:
+${val('melhoria')}
+
+LOCAL E DATA: ${val('cidade')}, ${val('data')}
+MONITOR(A): ${val('assinatura')}
+${arquivo?'\nARQUIVO COMPLEMENTAR A ANEXAR: '+arquivo.name:''}`;
+ const to=val('destinatario');
+ document.getElementById('feedback').style.display='block';
+ document.getElementById('feedback').textContent='O aplicativo de e-mail será aberto. Revise o conteúdo e anexe manualmente o arquivo, se houver.';
+ location.href='mailto:'+encodeURIComponent(to)+'?subject='+encodeURIComponent('Relatório de Atividades DOCENTE/MONITOR - '+val('nome'))+'&body='+encodeURIComponent(conteudo);
+});
+form.addEventListener('reset',()=>{document.getElementById('feedback').style.display='none'});
+</script>
+</body></html>
